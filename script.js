@@ -365,6 +365,11 @@ c.remove();
 /* ==========================
    AUTO MUSIC
 ========================== */
+function playMusic(){
+    let music = document.getElementById("bgMusic");
+    music.volume = 1.0;
+    music.play();
+}
 
 document.addEventListener("click",()=>{
 
