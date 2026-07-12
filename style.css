@@ -1,0 +1,395 @@
+/* ==========================
+   APPLE STYLE RESET
+========================== */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html,
+body{
+
+width:100%;
+height:100%;
+
+overflow:hidden;
+
+font-family:'Poppins',sans-serif;
+
+background:#000;
+
+color:#fff;
+
+}
+
+/* ==========================
+   ANIMATED BACKGROUND
+========================== */
+
+.gradient{
+
+position:fixed;
+
+inset:0;
+
+background:
+linear-gradient(
+-45deg,
+#0f2027,
+#203a43,
+#2c5364,
+#6a11cb,
+#ff4d88
+);
+
+background-size:500% 500%;
+
+animation:bgMove 18s ease infinite;
+
+z-index:-3;
+
+}
+
+@keyframes bgMove{
+
+0%{
+
+background-position:0% 50%;
+
+}
+
+50%{
+
+background-position:100% 50%;
+
+}
+
+100%{
+
+background-position:0% 50%;
+
+}
+
+}
+
+/* ==========================
+   PARTICLES LAYER
+========================== */
+
+#particles{
+
+position:fixed;
+
+inset:0;
+
+overflow:hidden;
+
+pointer-events:none;
+
+z-index:-2;
+
+}
+
+/* ==========================
+   PAGES
+========================== */
+
+.page{
+
+position:absolute;
+
+width:100%;
+height:100%;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+opacity:0;
+
+transform:scale(.95);
+
+transition:.8s ease;
+
+pointer-events:none;
+
+}
+
+.page.active{
+
+opacity:1;
+
+transform:scale(1);
+
+pointer-events:auto;
+
+}
+
+/* ==========================
+   GLASS CARD
+========================== */
+
+.glass{
+
+width:min(92%,480px);
+
+padding:40px;
+
+border-radius:32px;
+
+text-align:center;
+
+background:rgba(255,255,255,.08);
+
+border:1px solid rgba(255,255,255,.15);
+
+backdrop-filter:blur(24px);
+
+-webkit-backdrop-filter:blur(24px);
+
+box-shadow:
+
+0 20px 70px rgba(0,0,0,.45),
+
+inset 0 1px rgba(255,255,255,.2);
+
+}
+/* ==========================
+   HEADINGS
+========================== */
+
+h1{
+font-size:clamp(2.4rem,6vw,3.8rem);
+font-weight:700;
+line-height:1.2;
+margin-bottom:15px;
+}
+
+h3{
+font-size:1.2rem;
+font-weight:400;
+opacity:.9;
+margin-bottom:10px;
+}
+
+p{
+font-size:1rem;
+opacity:.85;
+margin-top:18px;
+}
+
+/* ==========================
+   GIFT
+========================== */
+
+#gift{
+
+font-size:95px;
+cursor:pointer;
+user-select:none;
+
+animation:giftFloat 2.5s ease-in-out infinite;
+
+transition:.35s;
+
+}
+
+#gift:hover{
+
+transform:scale(1.08);
+
+}
+
+@keyframes giftFloat{
+
+0%,100%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-14px);
+
+}
+
+}
+
+/* ==========================
+   CAKE
+========================== */
+
+.cake{
+
+position:relative;
+
+display:inline-block;
+
+margin:30px 0;
+
+font-size:120px;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+.cake:hover{
+
+transform:scale(1.05);
+
+}
+
+/* ==========================
+   CANDLE
+========================== */
+
+#flame{
+
+position:absolute;
+
+left:50%;
+
+top:-25px;
+
+transform:translateX(-50%);
+
+font-size:28px;
+
+animation:flicker .7s infinite alternate;
+
+transition:.5s;
+
+}
+
+@keyframes flicker{
+
+0%{
+
+transform:translateX(-50%) scale(.9);
+
+}
+
+100%{
+
+transform:translateX(-50%) scale(1.15);
+
+}
+
+}
+
+/* ==========================
+   MESSAGE
+========================== */
+
+#wish{
+
+min-height:140px;
+
+line-height:1.8;
+
+font-size:18px;
+
+margin-top:15px;
+
+}
+
+/* ==========================
+   BUTTON
+========================== */
+
+button{
+
+margin-top:20px;
+
+padding:14px 26px;
+
+border:none;
+
+border-radius:999px;
+
+background:rgba(255,255,255,.12);
+
+backdrop-filter:blur(18px);
+
+color:white;
+
+font-size:16px;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+button:hover{
+
+background:rgba(255,255,255,.2);
+
+transform:translateY(-3px);
+
+}
+
+/* ==========================
+   FROM
+========================== */
+
+#from{
+
+margin-top:30px;
+
+font-size:26px;
+
+opacity:0;
+
+transform:translateY(25px);
+
+transition:1.2s;
+
+}
+
+#from.show{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+/* ==========================
+   MOBILE
+========================== */
+
+@media(max-width:600px){
+
+.glass{
+
+padding:28px;
+
+}
+
+#gift{
+
+font-size:75px;
+
+}
+
+.cake{
+
+font-size:90px;
+
+}
+
+button{
+
+width:100%;
+
+}
+
+}
